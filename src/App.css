@@ -19,3 +19,22 @@ body {
   );
   box-shadow: 0rem 0.188rem 0.25rem rgba(0, 0, 0, 0.25);
 }
+.App .weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.App h1 {
+  text-align: center;
+  color: #272044;
+  font-size: 30px;
+  font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.App .title {
+  position: relative;
+  top: 4px;
+}

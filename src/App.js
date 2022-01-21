@@ -1,6 +1,7 @@
 import "./App.css";
 import Weather from "./Weather";
 import Logo from "./logo.png";
+import Form from "./Form";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <img src={Logo} alt="logo" width="160px" />
         <span className="title">WEATHER </span>
       </h1>
+      <Form />
       <Weather />
     </div>
   );

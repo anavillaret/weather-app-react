@@ -14,11 +14,7 @@ export default function Form() {
           />
         </div>
         <div className="col-3">
-          <button
-            type="sumbit"
-            value="Search"
-            className="btn btn-light w-100"
-          />
+          <input type="sumbit" value="Search" className="btn btn-light w-100" />
         </div>
       </div>
     </form>

@@ -33,7 +33,7 @@ export default function Weather() {
 
   if (search) {
     return (
-      <div className="weather-info">
+      <div>
         <form id="search-form" className="mb-3" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
@@ -82,6 +82,20 @@ export default function Weather() {
             <span className="units">ºC</span>
           </div>
         </div>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="Search"
+            placeholder="Enter a city..."
+            onChange={updateCity}
+          />
+          <input type="Submit" defaultValue="Search" />
+        </form>
+        <h4> Loading search results...</h4>
       </div>
     );
   }

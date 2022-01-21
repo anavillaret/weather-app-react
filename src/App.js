@@ -1,6 +1,7 @@
 import "./App.css";
 import Weather from "./Weather";
 import Logo from "./logo.png";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <span className="title">WEATHER </span>
       </h1>
       <Weather />
+      <Footer />
     </div>
   );
 }

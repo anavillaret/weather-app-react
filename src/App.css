@@ -19,10 +19,6 @@ body {
   );
   box-shadow: 0rem 0.188rem 0.25rem rgba(0, 0, 0, 0.25);
 }
-.App .weather-app-wrapper {
-  max-width: 600px;
-  margin: 30px auto;
-}
 
 .App h1 {
   text-align: center;
@@ -37,4 +33,87 @@ body {
 .App .title {
   position: relative;
   top: 4px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "PT Mono", monospace;
+  font-weight: 400px;
+  line-height: 28px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-family: "PT Mono", monospace;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  color: #272044;
+  opacity: 0.8;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 19px;
+}
+
+div .col-3 {
+  text-align: right;
+}
+.title {
+  position: relative;
+  top: 4px;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.weather-app {
+  font-family: "PT Mono", monospace;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+  background: linear-gradient(
+    179.7deg,
+    rgb(248, 126, 126) -2%,
+    rgb(251, 206, 143) 30.3%,
+    rgb(184, 252, 233) 57.2%,
+    rgb(118, 162, 229) 80.3%
+  );
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.weather-temperature {
+  text-align: center;
+}
+
+.weather-temperature img {
+  height: 64px;
+  width: 64px;
+  margin-top: 0;
+}
+.weather-temperature strong {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+  position: relative;
+  top: 18px;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -15px;
+}
+.weather-temperature .active {
+  cursor: default;
 }

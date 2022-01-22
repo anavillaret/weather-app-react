@@ -11,6 +11,7 @@ function App() {
         <span className="title">WEATHER </span>
       </h1>
       <Weather />
+      <hr></hr>
       <Footer />
     </div>
   );

@@ -5,6 +5,7 @@ body {
 
 .App {
   display: block;
+  margin: 0 auto;
   max-width: 41.875rem;
   font-family: "PT Mono", monospace;
   padding: 1.25rem;

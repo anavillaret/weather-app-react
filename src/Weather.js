@@ -48,7 +48,7 @@ export default function Weather() {
             </div>
             <div className="col-3">
               <input
-                type="sumbit"
+                type="submit"
                 value="Search"
                 className="btn btn-light w-100"
               />

@@ -6,8 +6,8 @@ import { Rings } from "react-loader-spinner";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -16,7 +16,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -63,10 +63,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return (
-      <div>
-        <Rings color="#27296d" height={80} width={80} align="center" />
-      </div>
-    );
+    return <Rings color="#27296d" height={80} width={80} align="center" />;
   }
 }

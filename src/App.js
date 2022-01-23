@@ -1,9 +1,10 @@
-import "./App.css";
 import Weather from "./Weather";
 import Logo from "./logo.png";
 import Footer from "./Footer";
 
-function App() {
+import "./App.css";
+
+export default function App() {
   return (
     <div className="App">
       <h1 classNamea="app-title" alt="logo" width="10rem">
@@ -16,5 +17,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

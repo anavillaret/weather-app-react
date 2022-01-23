@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CurrentDate from "./CurrentDate";
 import axios from "axios";
+import { Rings } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -83,6 +84,11 @@ export default function Weather(props) {
     const apiKey = "2e40d4aa4d4b8555f7f377a7a64a2133";
     let Url = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(Url).then(handleSubmit);
-    return "Loading...";
+    return (
+      <div>
+        {" "}
+        <Rings color="darkblue" height={80} width={80} />
+      </div>
+    );
   }
 }

@@ -5,7 +5,7 @@ import { Rings } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -20,6 +20,21 @@ export default function Weather(props) {
     });
   }
 
+  function search() {
+    const apiKey = "2e40d4aa4d4b8555f7f377a7a64a2133";
+    let Url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(Url).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
     return (
       <div>
@@ -31,6 +46,7 @@ export default function Weather(props) {
                 placeholder="Type a city here..."
                 className="form-control"
                 autoFocus="on"
+                onChange={handleCityChange}
               />
             </div>
             <div className="col-3">
@@ -46,13 +62,10 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "2e40d4aa4d4b8555f7f377a7a64a2133";
-    let Url = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(Url).then(handleResponse);
+    search();
     return (
       <div>
-        {" "}
-        <Rings color="darkblue" height={80} width={80} />
+        <Rings color="#27296d" height={80} width={80} align="center" />
       </div>
     );
   }

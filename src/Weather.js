@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import CurrentDate from "./CurrentDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import { Rings } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
-  function handleSubmit(response) {
+  function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
       ready: true,
@@ -42,48 +42,13 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <h2 className="city">{weatherData.city}</h2>
-        <div className="row">
-          <div className="col-9">
-            <ul>
-              <li className="date">
-                <CurrentDate date={weatherData.date} />
-              </li>
-              <li className="description">{weatherData.description}</li>
-            </ul>
-          </div>
-          <div className="col-3">
-            <ul>
-              <li>
-                Humidity: <span id="humidity">{weatherData.humidity}</span>%
-              </li>
-              <li>
-                Wind: <span id="wind">{weatherData.wind}</span> Km/h
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="row">
-          <div className="clearfix weather-temperature">
-            <img
-              src={weatherData.iconUrl}
-              alt={weatherData.description}
-              className="float-left"
-              id="icon"
-            />
-            {""}
-            <strong id="temperature">
-              {Math.round(weatherData.temperature)}
-            </strong>
-            <span className="units">ºC</span>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
     const apiKey = "2e40d4aa4d4b8555f7f377a7a64a2133";
     let Url = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(Url).then(handleSubmit);
+    axios.get(Url).then(handleResponse);
     return (
       <div>
         {" "}

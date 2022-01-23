@@ -55,7 +55,7 @@ export default function Weather() {
             </div>
           </div>
         </form>
-        <h2 className="city text-center">{city}</h2>
+        <h2 className="city">{city}</h2>
         <div className="row">
           <div className="col-9">
             <ul>

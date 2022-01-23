@@ -11,7 +11,7 @@ export default function App() {
         <img src={Logo} alt="logo" width="160px" />
         <span className="title">WEATHER</span>
       </h1>
-      <Weather />
+      <Weather defaultCity="Cairo" />
       <hr></hr>
       <Footer />
     </div>

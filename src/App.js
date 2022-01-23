@@ -7,9 +7,9 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <h1 classNamea="app-title" alt="logo" width="10rem">
+      <h1 className="app-title" alt="logo" width="10rem">
         <img src={Logo} alt="logo" width="160px" />
-        <span className="title">WEATHER </span>
+        <span className="title">WEATHER</span>
       </h1>
       <Weather />
       <hr></hr>

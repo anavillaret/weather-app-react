@@ -100,7 +100,7 @@ div .col-3 {
 .weather-temperature img {
   height: 4rem;
   width: 4rem;
-  margin-top: 0;
+  margin-top: 50px;
 }
 .weather-temperature strong {
   font-size: 4rem;

@@ -95,6 +95,7 @@ div .col-3 {
 
 .weather-temperature {
   text-align: center;
+  margin-bottom: 1.25rem;
 }
 
 .weather-temperature strong {
@@ -116,6 +117,21 @@ div .col-3 {
 }
 .weather-temperature .active {
   cursor: default;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-day {
+  font-size: 16px;
+}
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+.weather-forecast-min {
+  opacity: 0.5;
+  margin-left: 0.188rem;
 }
 
 .footer {

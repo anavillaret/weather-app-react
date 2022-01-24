@@ -97,23 +97,22 @@ div .col-3 {
   text-align: center;
 }
 
-.weather-temperature img {
-  height: 4rem;
-  width: 4rem;
-  margin-top: 50px;
-}
 .weather-temperature strong {
+  text-align: center;
   font-size: 4rem;
   line-height: 1;
   font-weight: 400;
   position: relative;
   top: 1.125rem;
+  left: 1.688rem;
 }
 
 .weather-temperature .units {
+  text-align: center;
   position: relative;
   font-size: 1rem;
   top: -0.938rem;
+  left: 32.188px;
 }
 .weather-temperature .active {
   cursor: default;

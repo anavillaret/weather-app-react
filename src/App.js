@@ -1,6 +1,5 @@
 import Weather from "./Weather";
 import Logo from "./logo.png";
-import Forecast from "./Forecast";
 import Footer from "./Footer";
 
 import "./App.css";
@@ -13,8 +12,7 @@ export default function App() {
         <span className="title">WEATHER</span>
       </h1>
       <Weather defaultCity="Cairo" />
-      <hr></hr>
-      <Forecast />
+
       <Footer />
     </div>
   );

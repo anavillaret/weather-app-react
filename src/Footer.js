@@ -14,7 +14,7 @@ export default function Footer() {
         </a>{" "}
         and is{" "}
         <a
-          href="https://eloquent-morse-3bec8f.netlify.app"
+          href="https://github.com/anavillaret/weather-app-react"
           target="_blank"
           rel="noopener noreferrer"
         >
